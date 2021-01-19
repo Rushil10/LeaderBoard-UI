@@ -1,21 +1,36 @@
-import { StatusBar } from 'expo-status-bar';
-import React from 'react';
-import { StyleSheet, Text, View } from 'react-native';
+// In App.js in a new project
 
-export default function App() {
+import * as React from 'react';
+import { View, Text } from 'react-native';
+import { NavigationContainer } from '@react-navigation/native';
+import { createStackNavigator } from '@react-navigation/stack';
+import { createMaterialTopTabNavigator } from '@react-navigation/material-top-tabs';
+import Today from './src/Tabs/Today'
+import ThisWeek from './src/Tabs/ThisWeek'
+import ThisMonth from './src/Tabs/ThisMonth'
+
+const Stack = createStackNavigator();
+
+const Tab = createMaterialTopTabNavigator();
+
+function MyTabs() {
   return (
-    <View style={styles.container}>
-      <Text>Open up App.js to start working on your app!</Text>
-      <StatusBar style="auto" />
-    </View>
+    <Tab.Navigator>
+      <Tab.Screen name="Today" component={Today} />
+      <Tab.Screen name="This Week" component={ThisWeek} />
+      <Tab.Screen name="This Month" component={ThisMonth} />
+    </Tab.Navigator>
   );
 }
 
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: '#fff',
-    alignItems: 'center',
-    justifyContent: 'center',
-  },
-});
+function App() {
+  return (
+    <NavigationContainer>
+      <Stack.Navigator>
+        <Stack.Screen name="LeaderBoard" component={MyTabs} />
+      </Stack.Navigator>
+    </NavigationContainer>
+  );
+}
+
+export default App;

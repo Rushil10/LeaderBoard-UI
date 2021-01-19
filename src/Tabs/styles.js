@@ -1,0 +1,105 @@
+import { Dimensions } from 'react-native';
+
+const windowWidth = Dimensions.get('window').width;
+const windowHeight = Dimensions.get('window').height;
+
+const styles = {
+    row:{
+        flexDirection:'row',
+        height:205,
+        backgroundColor:'white',
+        borderRadius:15
+    },
+    rankCols:{
+        width:windowWidth/3,
+        alignItems:'center',
+    },
+    rankOneImage:{
+        height:windowWidth/3-21,
+        width:windowWidth/3-21,
+        marginTop:21,
+        borderRadius:15
+    },
+    rankOneText:{
+        marginTop:1,
+        fontWeight:'bold'
+    },
+    rankOneUsername:{
+        color:'gray',
+        fontWeight:'bold'
+    },
+    rank:{
+        lineHeight:31,
+        fontWeight:'bold'
+    },
+    rankImage:{
+        height:windowWidth/3-35,
+        width:windowWidth/3-35,
+        borderRadius:15
+    },
+    list:{
+        marginBottom:35,
+        backgroundColor:'#dddee4'
+    },
+    card:{
+        flexDirection:'row',
+        marginTop:19,
+        marginLeft:0,
+        marginRight:15,
+        height:69,
+    },
+    rankDisplay:{
+        flexDirection:'column',
+        alignItems:'center',
+        justifyContent:'center',
+        width:windowWidth/8,
+    },
+    otherRanks:{
+        width:(7*windowWidth/8)-11,
+        borderRadius:15,
+        flexDirection:'row',
+        backgroundColor:'white'
+    },
+    otherImage:{
+        flexDirection:'column',
+        alignItems:'center',
+        justifyContent:'center',
+        width:((7*windowWidth/8)-10)/6,
+        height:69
+    },
+    otherRankImage:{
+        height:(((7*windowWidth/8)-10)/6)-15,
+        width:(((7*windowWidth/8)-10)/6)-15,
+        borderRadius:9
+    },
+    otherData:{
+        flexDirection:'column',
+        width:(4*((7*windowWidth/8)-10)/6),
+    },
+    othername:{
+        marginTop:11,
+        marginLeft:5,
+        fontWeight:'bold',
+        fontSize:15
+    },
+    otherusername:{
+        marginLeft:5,
+        color:'gray',
+        fontWeight:'bold'
+    },
+    otherRank:{
+        flexDirection:'column',
+        alignItems:'center',
+        justifyContent:'center',
+        width:((7*windowWidth/8)-10)/6,
+        height:65
+    },
+    disRank:{
+        fontWeight:'bold',
+    },
+    makeBold:{
+        fontWeight:'bold'
+    }
+}
+
+export default styles;
